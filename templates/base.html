@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>{{ title }}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"/>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</head>
+<body data-spy="scroll" data-target="#toc">
+<main>
+    <div class="container">
+        <div class="row justify-content-center align-items-center py-4">
+            <div class="logo-container">
+                <img src="../static/img/baeda.png" alt="Baeda Logo" class="logo">
+            </div>
+            <div class="logo-container">
+                <img src="../static/img/polito.png" alt="Polito Logo" class="logo">
+            </div>
+        </div>
+        <!-- Report Header -->
+        <div class="row">
+            <div class="col-sm-3">
+                <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+            </div>
+            <div class="col-sm-9">
+                <div class="pb-3 mb-4 border-bottom">
+                    <h1>{{ title }}</h1>
+                    <p>{{ subtitle }}</p>
+                </div>
+
+                <!-- Operating chart plot -->
+                <div class="p-0 mb-4">
+                    <h2>{{ operating_chart.title }}</h2>
+                    <div class="row p-0 mb-4">
+                        <p>{{ operating_chart.description }}</p>
+                    </div>
+                    <div class="row p-0 mb-4">
+                        {{ operating_chart.plot }}
+                    </div>
+                </div>
+
+                <!-- coldest days -->
+                <div class="p-0 mb-4">
+                    <h2>{{ coldest_days.title }}</h2>
+                    <div class="row p-0 mb-4">
+                        <p>{{ coldest_days.description }}</p>
+                    </div>
+                    <div class="row p-0 mb-4">
+                        {{ coldest_days.plot }}
+                    </div>
+                </div>
+                <footer class="pt-3 mt-4 text-muted border-top">
+                    <p>{{ footer_text }}</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
