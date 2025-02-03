@@ -23,7 +23,7 @@ The structure of the repository is organized as follow:
 
 - Open the terminal and move to the project folder.
     ```bash
-  cd REC_sharing_mechanism
+  cd example_interactive_HVAC_report
     ```
 
 - Check the python version installed:
